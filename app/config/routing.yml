@@ -1,3 +1,7 @@
+bizz_admin:
+    resource: "@BizzAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 bizz_user:
     resource: "@BizzUserBundle/Resources/config/routing.yml"
     prefix:   /

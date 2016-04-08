@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Craue\FormFlowBundle\CraueFormFlowBundle(),
             new Bizz\UserBundle\BizzUserBundle(),
+            new Bizz\AdminBundle\BizzAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

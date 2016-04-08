@@ -1,0 +1,24 @@
+icat_index:
+    path:     /
+    defaults: { _controller: "BizzAdminBundle:Icat:index" }
+    methods:  GET
+
+icat_show:
+    path:     /{id}/show
+    defaults: { _controller: "BizzAdminBundle:Icat:show" }
+    methods:  GET
+
+icat_new:
+    path:     /new
+    defaults: { _controller: "BizzAdminBundle:Icat:new" }
+    methods:  [GET, POST]
+
+icat_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BizzAdminBundle:Icat:edit" }
+    methods:  [GET, POST]
+
+icat_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BizzAdminBundle:Icat:delete" }
+    methods:  DELETE
