@@ -2,11 +2,10 @@
 
 namespace Bizz\AdminBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Bizz\AdminBundle\Entity\Icat;
 use Bizz\AdminBundle\Form\IcatType;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Icat controller.
@@ -122,7 +121,6 @@ class IcatController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('icat_delete', array('id' => $icat->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

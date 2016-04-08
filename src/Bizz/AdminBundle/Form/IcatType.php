@@ -15,10 +15,9 @@ class IcatType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-        ;
+            ->add('name');
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
