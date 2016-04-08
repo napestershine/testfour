@@ -72,3 +72,11 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Bizz\UserBundle\Entity\User
+    from_email:
+            address:        shine@bizzort.com
+            sender_name:    Admin
+    registration:
+        form:
+            type: Bizz\UserBundle\Form\RegistrationType
+        confirmation:
+            enabled: true
