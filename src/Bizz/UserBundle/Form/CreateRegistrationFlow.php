@@ -14,11 +14,7 @@ class CreateRegistrationFlow extends FormFlow
                 'form_type' => 'Bizz\UserBundle\Form\SelectUserType',
             ),
             array(
-                'label' => 'Registration Type',
-                'form_type' => 'Bizz\UserBundle\Form\SelectProcessType',
-            ),
-            array(
-                'label' => 'Registration By Details',
+                'label' => 'Registration Details',
                 'form_type' => 'Bizz\UserBundle\Form\RegistrationType',
             ),
             array(
