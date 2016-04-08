@@ -1,0 +1,3 @@
+bizz_admin_homepage:
+    path:     /
+    defaults: { _controller: BizzAdminBundle:Default:index }
