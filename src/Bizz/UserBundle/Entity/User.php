@@ -34,6 +34,12 @@ class User extends BaseUser
      */
     protected $category;
 
+    /** @ORM\Column(name="linkedin_id", type="string", length=255, nullable=true) */
+    protected $linkedin_id;
+
+    /** @ORM\Column(name="linkedin_access_token", type="string", length=255, nullable=true) */
+    protected $linkedin_access_token;
+
     public function __construct()
     {
         parent::__construct();
