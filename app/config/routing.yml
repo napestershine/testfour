@@ -1,6 +1,6 @@
 bizz_admin:
     resource: "@BizzAdminBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /admin
 
 bizz_user:
     resource: "@BizzUserBundle/Resources/config/routing.yml"
