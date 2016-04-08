@@ -8,10 +8,7 @@ Tasks todo:
 2. Select type of registration: Social like: LinkedIN or Email Registration
 2(a). Redirect to Registration form after Linkedin confirmation.
 2(b). Fill registration Form
-3. Send confirmation email
-4. Verify email.
-5. Thank you message on Email Verification
-5. Redirect to profile.
+3. Redirect to profile.
 
 Progress:
 On step 1.
