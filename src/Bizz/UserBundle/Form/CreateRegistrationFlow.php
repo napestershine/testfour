@@ -3,7 +3,6 @@
 namespace Bizz\UserBundle\Form;
 
 use Craue\FormFlowBundle\Form\FormFlow;
-use Craue\FormFlowBundle\Form\FormFlowInterface;
 
 class CreateRegistrationFlow extends FormFlow
 {

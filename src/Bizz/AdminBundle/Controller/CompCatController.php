@@ -2,11 +2,10 @@
 
 namespace Bizz\AdminBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use Bizz\AdminBundle\Entity\CompCat;
 use Bizz\AdminBundle\Form\CompCatType;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * CompCat controller.
@@ -122,7 +121,6 @@ class CompCatController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('compcat_delete', array('id' => $compCat->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }
