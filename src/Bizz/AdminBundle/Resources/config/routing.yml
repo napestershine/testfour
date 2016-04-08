@@ -1,3 +1,7 @@
+bizz_admin_compcat:
+    resource: "@BizzAdminBundle/Resources/config/routing/compcat.yml"
+    prefix:   /compcat
+
 bizz_admin_icat:
     resource: "@BizzAdminBundle/Resources/config/routing/icat.yml"
     prefix:   /icat

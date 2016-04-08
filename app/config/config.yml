@@ -63,7 +63,7 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: "%mailer_transport%"
+    transport: gmail
     host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
@@ -75,7 +75,7 @@ fos_user:
     user_class: Bizz\UserBundle\Entity\User
     use_username_form_type: false
     from_email:
-            address:        shine@bizzort.com
+            address:        shine@example.com
             sender_name:    Admin
     registration:
         form:
