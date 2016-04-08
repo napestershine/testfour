@@ -1,3 +1,7 @@
+bizz_admin_icat:
+    resource: "@BizzAdminBundle/Resources/config/routing/icat.yml"
+    prefix:   /icat
+
 bizz_admin_homepage:
     path:     /
     defaults: { _controller: BizzAdminBundle:Default:index }
