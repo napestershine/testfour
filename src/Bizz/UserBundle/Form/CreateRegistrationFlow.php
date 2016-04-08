@@ -6,26 +6,20 @@ use Craue\FormFlowBundle\Form\FormFlow;
 
 class CreateRegistrationFlow extends FormFlow
 {
-
     protected function loadStepsConfig()
     {
         return array(
             array(
-                'label' => 'wheels',
+                'label' => 'User Type',
                 'form_type' => 'Bizz\UserBundle\Form\SelectUserType',
             ),
             array(
-                'label' => 'wheels',
-                'form_type' => 'Bizz\UserBundle\Form\SelectProcessType',
-            ),
-            array(
-                'label' => 'engine',
+                'label' => 'Registration Details',
                 'form_type' => 'Bizz\UserBundle\Form\RegistrationType',
             ),
             array(
-                'label' => 'confirmation',
+                'label' => 'Registration Confirmation',
             ),
         );
     }
-
 }
