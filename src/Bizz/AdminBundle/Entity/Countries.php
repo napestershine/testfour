@@ -5,12 +5,12 @@ namespace Bizz\AdminBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * State
+ * Country
  *
- * @ORM\Table(name="state")
- * @ORM\Entity(repositoryClass="Bizz\AdminBundle\Repository\StateRepository")
+ * @ORM\Table(name="countries")
+ * @ORM\Entity(repositoryClass="Bizz\AdminBundle\Repository\CountriesRepository")
  */
-class State
+class Countries
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class State
     /**
      * @var string
      *
-     * @ORM\Column(name="state", type="string", length=255)
+     * @ORM\Column(name="country", type="string", length=255)
      */
-    private $state;
+    private $country;
 
 
     /**
@@ -40,27 +40,27 @@ class State
     }
 
     /**
-     * Set state
+     * Set country
      *
-     * @param string $state
+     * @param string $country
      *
-     * @return State
+     * @return Countries
      */
-    public function setState($state)
+    public function setCountry($country)
     {
-        $this->state = $state;
+        $this->country = $country;
 
         return $this;
     }
 
     /**
-     * Get state
+     * Get country
      *
      * @return string
      */
-    public function getState()
+    public function getCountry()
     {
-        return $this->state;
+        return $this->country;
     }
 }
 
