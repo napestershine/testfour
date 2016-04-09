@@ -29,8 +29,8 @@ class States
     private $state;
 
     /**
-     * @ManyToOne(targetEntity="Countries", inversedBy="state")
-     * @JoinColumn(name="country_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Countries", inversedBy="state")
+     * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      */
     private $country;
 

@@ -30,10 +30,13 @@ class Countries
     private $country;
 
     /**
-     * @OneToMany(targetEntity="States", mappedBy="country")
+     * @ORM\OneToMany(targetEntity="States", mappedBy="country")
      */
     private $state;
 
+    /**
+     * Countries constructor.
+     */
     public function __construct()
     {
         $this->state = new ArrayCollection();
