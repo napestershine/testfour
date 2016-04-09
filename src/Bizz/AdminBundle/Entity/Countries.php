@@ -35,7 +35,7 @@ class Countries
     private $state;
 
     /**
-     * @ORM\OneToMany(targetEntity="User", mappedBy="country")
+     * @ORM\OneToMany(targetEntity="Bizz\UserBundle\Entity\User", mappedBy="country")
      */
     private $user;
 

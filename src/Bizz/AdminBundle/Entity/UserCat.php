@@ -35,7 +35,7 @@ class UserCat
     private $category;
 
     /**
-     * @ORM\OneToMany(targetEntity="User", mappedBy="usercat")
+     * @ORM\OneToMany(targetEntity="Bizz\UserBundle\Entity\User", mappedBy="usercat")
      */
     private $user;
 

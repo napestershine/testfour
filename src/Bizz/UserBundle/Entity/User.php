@@ -21,22 +21,22 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="UserCat", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="Bizz\AdminBundle\Entity\UserCat", inversedBy="user")
      * @ORM\JoinColumn(name="usercat_id", referencedColumnName="id")
      */
     private $usercat;
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="Bizz\AdminBundle\Entity\Category", inversedBy="user")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     private $category;
     /**
-     * @ORM\ManyToOne(targetEntity="Countries", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="Bizz\AdminBundle\Entity\Countries", inversedBy="user")
      * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      */
     private $country;
     /**
-     * @ORM\ManyToOne(targetEntity="States", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="Bizz\AdminBundle\Entity\States", inversedBy="user")
      * @ORM\JoinColumn(name="state_id", referencedColumnName="id")
      */
     private $state;
