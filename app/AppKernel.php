@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Craue\FormFlowBundle\CraueFormFlowBundle(),
             new Bizz\UserBundle\BizzUserBundle(),
             new Bizz\AdminBundle\BizzAdminBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
