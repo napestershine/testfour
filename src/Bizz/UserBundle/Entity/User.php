@@ -25,7 +25,7 @@ class User extends BaseUser
      *
      * @Assert\NotBlank(message="Please select a user type.", groups={"Registration", "Profile"})
      */
-    protected $usertype;
+    protected $usercat;
 
     /**
      * @ORM\Column(type="string", length=255)
