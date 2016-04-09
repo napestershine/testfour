@@ -1,0 +1,24 @@
+states_index:
+    path:     /
+    defaults: { _controller: "BizzAdminBundle:States:index" }
+    methods:  GET
+
+states_show:
+    path:     /{id}/show
+    defaults: { _controller: "BizzAdminBundle:States:show" }
+    methods:  GET
+
+states_new:
+    path:     /new
+    defaults: { _controller: "BizzAdminBundle:States:new" }
+    methods:  [GET, POST]
+
+states_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BizzAdminBundle:States:edit" }
+    methods:  [GET, POST]
+
+states_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BizzAdminBundle:States:delete" }
+    methods:  DELETE

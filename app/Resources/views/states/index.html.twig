@@ -1,28 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>CompCat list</h1>
+    <h1>States list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>State</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for compCat in compCats %}
+        {% for state in states %}
             <tr>
-                <td><a href="{{ path('compcat_show', { 'id': compCat.id }) }}">{{ compCat.id }}</a></td>
-                <td>{{ compCat.name }}</td>
+                <td><a href="{{ path('states_show', { 'id': state.id }) }}">{{ state.id }}</a></td>
+                <td>{{ state.state }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('compcat_show', { 'id': compCat.id }) }}">show</a>
+                            <a href="{{ path('states_show', { 'id': state.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('compcat_edit', { 'id': compCat.id }) }}">edit</a>
+                            <a href="{{ path('states_edit', { 'id': state.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -33,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('compcat_new') }}">Create a new entry</a>
+            <a href="{{ path('states_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}

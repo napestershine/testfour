@@ -1,28 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Icat list</h1>
+    <h1>Countries list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Country</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for icat in icats %}
+        {% for country in countries %}
             <tr>
-                <td><a href="{{ path('icat_show', { 'id': icat.id }) }}">{{ icat.id }}</a></td>
-                <td>{{ icat.name }}</td>
+                <td><a href="{{ path('countries_show', { 'id': country.id }) }}">{{ country.id }}</a></td>
+                <td>{{ country.country }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('icat_show', { 'id': icat.id }) }}">show</a>
+                            <a href="{{ path('countries_show', { 'id': country.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('icat_edit', { 'id': icat.id }) }}">edit</a>
+                            <a href="{{ path('countries_edit', { 'id': country.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -33,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('icat_new') }}">Create a new entry</a>
+            <a href="{{ path('countries_new') }}">Create a new entry</a>
         </li>
     </ul>
 {% endblock %}

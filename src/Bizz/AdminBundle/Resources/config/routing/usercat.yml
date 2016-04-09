@@ -1,0 +1,12 @@
+usercat_index:
+    path:     /
+    defaults: { _controller: "BizzAdminBundle:UserCat:index" }
+    methods:  GET
+
+usercat_show:
+    path:     /{id}/show
+    defaults: { _controller: "BizzAdminBundle:UserCat:show" }
+    methods:  GET
+
+
+

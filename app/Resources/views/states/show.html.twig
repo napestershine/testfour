@@ -1,27 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Icat</h1>
+    <h1>States</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ icat.id }}</td>
+                <td>{{ state.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
-                <td>{{ icat.name }}</td>
+                <th>State</th>
+                <td>{{ state.state }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('icat_index') }}">Back to the list</a>
+            <a href="{{ path('states_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('icat_edit', { 'id': icat.id }) }}">Edit</a>
+            <a href="{{ path('states_edit', { 'id': state.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
