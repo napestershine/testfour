@@ -21,18 +21,25 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     *
-     * @Assert\NotBlank(message="Please select a user type.", groups={"Registration", "Profile"})
+     * @ORM\ManyToOne(targetEntity="UserCat", inversedBy="user")
+     * @ORM\JoinColumn(name="usercat_id", referencedColumnName="id")
      */
-    protected $usercat;
-
+    private $usercat;
     /**
-     * @ORM\Column(type="string", length=255)
-     *
-     * @Assert\NotBlank(message="Please select a category.", groups={"Registration", "Profile"})
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="user")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
-    protected $category;
+    private $category;
+    /**
+     * @ORM\ManyToOne(targetEntity="Countries", inversedBy="user")
+     * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+     */
+    private $country;
+    /**
+     * @ORM\ManyToOne(targetEntity="States", inversedBy="user")
+     * @ORM\JoinColumn(name="state_id", referencedColumnName="id")
+     */
+    private $state;
 
     /** @ORM\Column(name="linkedin_id", type="string", length=255, nullable=true) */
     protected $linkedin_id;
@@ -44,38 +51,6 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsertype()
-    {
-        return $this->usertype;
-    }
-
-    /**
-     * @param mixed $usertype
-     */
-    public function setUsertype($usertype)
-    {
-        $this->usertype = $usertype;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * @param mixed $category
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
     }
 
 }

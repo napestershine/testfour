@@ -2,6 +2,7 @@
 
 namespace Bizz\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -27,6 +28,22 @@ class States
      * @ORM\Column(name="state", type="string", length=255)
      */
     private $state;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Countries", inversedBy="state")
+     * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+     */
+    private $country;
+
+    /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="state")
+     */
+    private $user;
+
+    public function __construct()
+    {
+        $this->user = new ArrayCollection();
+    }
 
 
     /**
