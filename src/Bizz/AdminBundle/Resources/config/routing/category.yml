@@ -1,0 +1,12 @@
+category_index:
+    path:     /
+    defaults: { _controller: "BizzAdminBundle:Category:index" }
+    methods:  GET
+
+category_show:
+    path:     /{id}/show
+    defaults: { _controller: "BizzAdminBundle:Category:show" }
+    methods:  GET
+
+
+
