@@ -13,6 +13,8 @@ namespace Bizz\UserBundle\Form;
 
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseType;
 use FOS\UserBundle\Util\LegacyFormHelper;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -32,6 +34,12 @@ class RegistrationType extends BaseType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('firstname', TextType::class, array(
+                'label' => 'First Name'
+            ))
+            ->add('lastname', TextType::class, array(
+                'label' => 'Last Name'
+            ))
             ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'),
                 array(
                     'label' => 'form.email',
@@ -45,7 +53,14 @@ class RegistrationType extends BaseType
                     'first_options' => array('label' => 'form.password'),
                     'second_options' => array('label' => 'form.password_confirmation'),
                     'invalid_message' => 'fos_user.password.mismatch',
-                ));
+                ))
+            ->add('country', EntityType::class, array(
+                'label' => 'Select Country'
+            ))
+            ->add('state', EntityType::class, array(
+                'label' => 'Select State'
+            ));
+
     }
 
     public function configureOptions(OptionsResolver $resolver)
