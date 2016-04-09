@@ -2,6 +2,7 @@
 
 namespace Bizz\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,15 @@ class Countries
      */
     private $country;
 
+    /**
+     * @OneToMany(targetEntity="States", mappedBy="country")
+     */
+    private $state;
+
+    public function __construct()
+    {
+        $this->state = new ArrayCollection();
+    }
 
     /**
      * Get id
