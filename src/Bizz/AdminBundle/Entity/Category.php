@@ -2,6 +2,7 @@
 
 namespace Bizz\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,6 +34,16 @@ class Category
      * @ORM\JoinColumn(name="usercat_id", referencedColumnName="id")
      */
     private $usercat;
+
+    /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="category")
+     */
+    private $user;
+
+    public function __construct()
+    {
+        $this->user = new ArrayCollection();
+    }
 
 
     /**

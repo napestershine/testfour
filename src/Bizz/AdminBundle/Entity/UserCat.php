@@ -35,11 +35,17 @@ class UserCat
     private $category;
 
     /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="usercat")
+     */
+    private $user;
+
+    /**
      * UserCat constructor.
      */
     public function __construct()
     {
         $this->category = new ArrayCollection();
+        $this->user = new ArrayCollection();
     }
 
 

@@ -35,11 +35,17 @@ class Countries
     private $state;
 
     /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="country")
+     */
+    private $user;
+
+    /**
      * Countries constructor.
      */
     public function __construct()
     {
         $this->state = new ArrayCollection();
+        $this->user = new ArrayCollection();
     }
 
     /**
