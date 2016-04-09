@@ -2,6 +2,7 @@
 
 namespace Bizz\AdminBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -27,6 +28,19 @@ class UserCat
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Category", mappedBy="usercat")
+     */
+    private $category;
+
+    /**
+     * UserCat constructor.
+     */
+    public function __construct()
+    {
+        $this->category = new ArrayCollection();
+    }
 
 
     /**

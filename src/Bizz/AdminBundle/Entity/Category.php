@@ -28,6 +28,12 @@ class Category
      */
     private $name;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="UserCat", inversedBy="category")
+     * @ORM\JoinColumn(name="usercat_id", referencedColumnName="id")
+     */
+    private $usercat;
+
 
     /**
      * Get id
