@@ -78,8 +78,6 @@ fos_user:
             address:        shine@example.com
             sender_name:    Admin
     registration:
-        form:
-            type: Bizz\UserBundle\Form\RegistrationType
         confirmation:
             enabled: true
 
