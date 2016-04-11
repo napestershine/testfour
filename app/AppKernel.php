@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Bizz\UserBundle\BizzUserBundle(),
             new Bizz\AdminBundle\BizzAdminBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Bizz\WebBundle\BizzWebBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
