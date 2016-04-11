@@ -4,6 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@BizzUserBundle/Resources/config/services.yml" }
     - { resource: "@BizzAdminBundle/Resources/config/services.yml" }
+    - { resource: "@BizzWebBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -78,8 +79,6 @@ fos_user:
             address:        shine@example.com
             sender_name:    Admin
     registration:
-        form:
-            type: Bizz\UserBundle\Form\RegistrationType
         confirmation:
             enabled: true
 
