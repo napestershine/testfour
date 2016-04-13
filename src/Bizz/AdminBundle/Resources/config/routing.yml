@@ -1,3 +1,7 @@
+bizz_admin_productcategories:
+        resource: "@BizzAdminBundle/Resources/config/routing/productcategories.yml"
+        prefix:   /productcategories
+
 bizz_admin_states:
     resource: "@BizzAdminBundle/Resources/config/routing/states.yml"
     prefix:   /states
